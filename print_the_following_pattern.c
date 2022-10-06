@@ -1,21 +1,28 @@
-
 #include<stdio.h>
 int main()
 {
     int n;
     scanf("%d ",&n);
-        int sp=n-1, rw=1;
-        for(int i=1 ; i<=n ; i++){
-            for(int j=0 ; j<sp ; j++){
-                printf(" ");
-            }
-            for(int j=0 ; j<rw ; j++){
-                printf("%d",i);
-            }
-            if(i<n)
+for(int i=1 ; i<=n ; i++){
+            if(n%2!=0){
+                for(int j=1 ; j<=n-2 ; j++){
+                    printf("%d",j);
+                }
+                for(int k=n-2-1 ; k>=1 ; k--){
+                    printf("%d",k);
+                }
                 printf("
 ");
-            sp--;
-            rw+=2;
+            }
+            else{
+                for(int j=1 ; j<=n-2 ; j++){
+                    printf("%d",j);
+                }
+                for(int k=n-2-1 ; k>=1 ; k--){
+                    printf("%d",k);
+                }
+                printf("
+");
+            }
         }
 }
